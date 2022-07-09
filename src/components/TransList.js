@@ -7,11 +7,17 @@ export const TransList = () => {
   return (
     <div>
         <h3>History</h3>
-        <ul className="list">
-            {transactions.map(transaction => (
-                <Trans key={transaction.id} transaction={transaction}/>
-            ))}
-        </ul>
+        {transactions.length===0?
+        
+      <h4>Nothing here yet...</h4>
+      :
+      <ul className="list">
+        {transactions.map(transaction => (
+            <Trans key={transaction.id} transaction={transaction}/>
+        ))}
+    </ul>
+        }
+        
     </div>
   )
 }
