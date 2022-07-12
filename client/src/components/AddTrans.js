@@ -1,9 +1,12 @@
 import React, {useState, useContext} from 'react'
 import { GlobalContext } from '../context/GlobalState';
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 export const AddTrans = () => {
     const [text, setText] = useState('');
     const [amount, setAmount] = useState(0)
+    const [date, setDate] = useState(new Date());
     const { addTrans } = useContext(GlobalContext)
 
     const onSub = e => {
@@ -12,7 +15,8 @@ export const AddTrans = () => {
       const newTrans = {
          id: Math.floor(Math.random()*100000000),
          text,
-         amount: +amount
+         amount: +amount,
+         date
       }
 
       addTrans(newTrans)
@@ -28,9 +32,14 @@ export const AddTrans = () => {
             </div>
             <div className="form-control">
             <label htmlFor="amount">Amount <br />
-                (negative - expense, positive - income)
+                <h2 style={{margin: 0, fontSize: "12px"}}>(negative - expense, positive - income)</h2>
             </label>
           <input type="number" placeholder="Enter amount..."  value={amount} onChange={(e) => setAmount(e.target.value)}/>
+          <div className="form-control">
+            <label htmlFor="date">Date <br />
+            </label>
+            <DatePicker selected={date} onChange={(date:Date) => setDate(date)} />
+          </div>
         </div>
         <button className="btn">Add transaction</button>
       </form>
