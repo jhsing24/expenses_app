@@ -6,7 +6,6 @@ const initState = {
     transactions: JSON.parse(localStorage.getItem("transactions") || "[]")
 }
 
-
 //Create context
 export const GlobalContext = createContext(initState)
 
@@ -43,7 +42,6 @@ export const GlobalProvider = ({children}) => {
         transactions.push(transaction)
         localStorage.setItem('transactions', JSON.stringify(transactions));
     }
-
 
     return (
         <GlobalContext.Provider value={{

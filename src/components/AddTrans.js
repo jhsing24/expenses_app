@@ -41,7 +41,7 @@ export const AddTrans = () => {
             <DatePicker selected={date} onChange={(date) => setDate(date)} />
           </div>
         </div>
-        <button className="btn">Add transaction</button>
+        <button disabled={amount==0 || !text} className="btn">Add transaction</button>
       </form>
         
     </>
