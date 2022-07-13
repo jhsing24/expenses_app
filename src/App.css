@@ -6,10 +6,11 @@
 
 * {
   box-sizing: border-box;
+  color:rgb(120, 120, 120)
 }
 
 body {
-  background-color: #f7f7f7;
+  background-color: #333333;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,29 +25,51 @@ body {
   width: 350px;
 }
 
+
 h1 {
   letter-spacing: 1px;
   margin: 0;
 }
 
+h2 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 100;
+}
+
+.title {
+  font-size: 50px;
+  font-variant: small-caps;
+  font-weight: 600;
+}
+
+label {
+  font-size: 20px;
+  font-weight: bolder;
+}
+
 h3 {
   border-bottom: 1px solid #bbb;
   padding-bottom: 10px;
-  margin: 40px 0 10px;
 }
 
 h4 {
   margin: 0;
   text-transform: uppercase;
 }
+.nothing{
+  text-transform: none;
+  font-weight: lighter;
+  margin-bottom: 40px;
+}
 
 .inc-exp-container {
-  background-color: #fff;
+  background-color: #3a3a3a;
   box-shadow: var(--box-shadow);
   padding: 20px;
   display: flex;
   justify-content: space-between;
-  margin: 20px 0;
+  margin: 20px 0 0 0;
 }
 
 .inc-exp-container > div {
@@ -79,8 +102,9 @@ label {
 
 input[type='text'],
 input[type='number'] {
-  border: 1px solid #dedede;
-  border-radius: 2px;
+  background-color: #3a3a3a;
+  border: none;
+  box-shadow: var(--box-shadow);
   display: block;
   font-size: 16px;
   padding: 10px;
@@ -100,9 +124,13 @@ input[type='number'] {
   width: 100%;
   transition: all 0.3s ease-in-out;
 }
+.btn:hover {
+  background-color: #4b33c6;
+}
 .btn:disabled {
-  background-color: #9c88ff;
-  cursor: auto;
+  background-color: #464646;
+  cursor: not-allowed;
+  color: rgba(255, 255, 255, 0.098)
 }
 
 .btn:focus,
@@ -117,23 +145,29 @@ input[type='number'] {
 }
 
 .list li {
-  background-color: #fff;
   box-shadow: var(--box-shadow);
-  color: #333;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: relative;
+  color: rgba(255, 255, 255, 0.798);
   padding: 10px;
-  margin: 10px 0;
+  transition: all 0.4s ease-in-out;
+  margin: 4px 0px;
 }
 
 .list li.plus {
+  background-color: rgb(31, 53, 40);
   border-right: 5px solid #2ecc71;
 }
 
 .list li.minus {
+  background-color: rgb(53, 37, 31);
   border-right: 5px solid #c0392b;
+}
+
+.list li span {
+  color: rgba(255, 255, 255, 0.798);
 }
 
 .delete-btn {
@@ -164,4 +198,6 @@ input[type='number'] {
   font-size: 13px;
   line-height: 20px;
   position: relative;
+  top: 0;
+  right: 0%;
 }

@@ -12,7 +12,7 @@ export default (state, action) => {
         case 'ADD_TRANS':
             return {
                 ...state,
-                transactions: [action.payload, ...state.transactions]
+                transactions: [...state.transactions, action.payload]
             }
         default:
             return state

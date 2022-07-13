@@ -16,7 +16,7 @@ export const TransList = () => {
         <h3>History</h3>
         {transactions.length===0?
         
-      <h4>Nothing here yet...</h4>
+      <h4 className='nothing'>Nothing here yet...</h4>
       :
       <div>
         <ul className="list">

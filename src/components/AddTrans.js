@@ -32,7 +32,7 @@ export const AddTrans = () => {
             </div>
             <div className="form-control">
             <label htmlFor="amount">Amount <br />
-                <h2 style={{margin: 0, fontSize: "12px"}}>(negative - expense, positive - income)</h2>
+                <h2>(negative - expense, positive - income)</h2>
             </label>
           <input type="number" placeholder="Enter amount..."  value={amount} onChange={(e) => setAmount(e.target.value)}/>
           <div className="form-control">
