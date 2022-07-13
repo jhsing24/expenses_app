@@ -38,7 +38,7 @@ export const AddTrans = () => {
           <div className="form-control">
             <label htmlFor="date">Date <br />
             </label>
-            <DatePicker selected={date} onChange={(date:Date) => setDate(date)} />
+            <DatePicker selected={date} onChange={(date) => setDate(date)} />
           </div>
         </div>
         <button className="btn">Add transaction</button>
