@@ -16,7 +16,7 @@ export const AddTrans = () => {
          id: Math.floor(Math.random()*100000000),
          text,
          amount: +amount,
-         date
+         date: date.toDateString()
       }
 
       addTrans(newTrans)
